@@ -2,7 +2,7 @@ var loading = false;
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
 $(window).on("load", function() {
-    $("#age").html(getAge(Date.parse("1999/06/01 UTC")));
+    $("#age").html(getAge(Date.parse("1999/01/06 UTC")));
     setTimeout(function() {
         const width = window.innerWidth;
         const height = window.innerHeight;
@@ -143,7 +143,7 @@ document.addEventListener('keydown', function(e) {
                             addLine("<a style='color: #068984;font-weight: 800;'>                 `ooo/                   OS</a><a style='font-weight: 800;'>:</a> Linux Arch");
                             addLine("<a style='color: #068984;font-weight: 800;'>                `+oooo:                  Host</a><a style='font-weight: 800;'>:</a> NZXT N7 Z390");
                             addLine("<a style='color: #068984;font-weight: 800;'>               `+oooooo:                 Kernel</a><a style='font-weight: 800;'>:</a> 5.11.22-194-tkg-upds");
-                            addLine("<a style='color: #068984;font-weight: 800;'>               -+oooooo+:                Uptime</a><a style='font-weight: 800;'>:</a> " + getAge(Date.parse("1999/06/01 UTC")) + " years");
+                            addLine("<a style='color: #068984;font-weight: 800;'>               -+oooooo+:                Uptime</a><a style='font-weight: 800;'>:</a> " + getAge(Date.parse("1999/01/06 UTC")) + " years");
                             addLine("<a style='color: #068984;font-weight: 800;'>             `/:-:++oooo+:               Projects</a><a style='font-weight: 800;'>:</a> 2");
                             addLine("<a style='color: #068984;font-weight: 800;'>            `/++++/+++++++:              Shell</a><a style='font-weight: 800;'>:</a> zsh");
                             addLine("<a style='color: #068984;font-weight: 800;'>           `/++++++++++++++:             </a>-------------                      ");
