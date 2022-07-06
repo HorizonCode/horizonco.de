@@ -1,9 +1,9 @@
 var loading = false;
 const timer = ms => new Promise(res => setTimeout(res, ms));
 const dateField = $("#date");
-const clockHours = $("#clock").find("#hours");
-const clockMinutes = $("#clock").find("#minutes");
-const clockSeconds = $("#clock").find("#seconds");
+const clockHours = $("#clock #hours");
+const clockMinutes = $("#clock #minutes");
+const clockSeconds = $("#clock #seconds");
 
 $(window).on("load", function() {
     $("#age").html(getAge(Date.parse("1999/01/06 UTC")));
@@ -18,7 +18,7 @@ $(window).on("load", function() {
         if(clockHours.html() != hours) clockHours.html(hours < 10 ? "0" + hours : hours);
         if(clockMinutes.html() != minutes) clockMinutes.html(minutes < 10 ? "0" + minutes : minutes);
         if(clockSeconds.html() != seconds) clockSeconds.html(seconds < 10 ? "0" + seconds : seconds);
-        
+
         if(newDateString !== dateField.html()) dateField.html(newDateString);
     }, 1000);
 
