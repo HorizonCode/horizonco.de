@@ -1,12 +1,25 @@
 var loading = false;
 const timer = ms => new Promise(res => setTimeout(res, ms));
+const dateField = $("#date");
+const clockHours = $("#clock").find("#hours");
+const clockMinutes = $("#clock").find("#minutes");
+const clockSeconds = $("#clock").find("#seconds");
 
 $(window).on("load", function() {
     $("#age").html(getAge(Date.parse("1999/01/06 UTC")));
 
     setInterval(function(){
-        $("#clock").html(new Date().toLocaleTimeString());
-        $("#date").html(new Date().toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" }));
+        const currentDate = new Date();
+        const newDateString = currentDate.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+        const hours = currentDate.getHours();
+        const minutes = currentDate.getMinutes();
+        const seconds = currentDate.getSeconds();
+
+        if(clockHours.html() != hours) clockHours.html(hours < 10 ? "0" + hours : hours);
+        if(clockMinutes.html() != minutes) clockMinutes.html(minutes < 10 ? "0" + minutes : minutes);
+        if(clockSeconds.html() != seconds) clockSeconds.html(seconds < 10 ? "0" + seconds : seconds);
+        
+        if(newDateString !== dateField.html()) dateField.html(newDateString);
     }, 1000);
 
     setTimeout(function() {
