@@ -3,6 +3,11 @@ const timer = ms => new Promise(res => setTimeout(res, ms));
 
 $(window).on("load", function() {
     $("#age").html(getAge(Date.parse("1999/01/06 UTC")));
+
+    setInterval(function(){
+        $("#clock").html(new Date().toLocaleTimeString());
+    }, 1000);
+
     setTimeout(function() {
         const width = window.innerWidth;
         const height = window.innerHeight;
