@@ -2,6 +2,7 @@ var loading = false;
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
 $(window).on("load", function() {
+    $("#age").html(getAge(Date.parse('01-06-1999 UTC')));
     setTimeout(function() {
         const width = window.innerWidth;
         const height = window.innerHeight;
@@ -142,7 +143,7 @@ document.addEventListener('keydown', function(e) {
                             addLine("<a style='color: #068984;font-weight: 800;'>                 `ooo/                   OS</a><a style='font-weight: 800;'>:</a> Linux Arch");
                             addLine("<a style='color: #068984;font-weight: 800;'>                `+oooo:                  Host</a><a style='font-weight: 800;'>:</a> NZXT N7 Z390");
                             addLine("<a style='color: #068984;font-weight: 800;'>               `+oooooo:                 Kernel</a><a style='font-weight: 800;'>:</a> 5.11.22-194-tkg-upds");
-                            addLine("<a style='color: #068984;font-weight: 800;'>               -+oooooo+:                Uptime</a><a style='font-weight: 800;'>:</a> 23 years");
+                            addLine("<a style='color: #068984;font-weight: 800;'>               -+oooooo+:                Uptime</a><a style='font-weight: 800;'>:</a> " + getAge(Date.parse("01-06-1999 UTC")) + " years");
                             addLine("<a style='color: #068984;font-weight: 800;'>             `/:-:++oooo+:               Projects</a><a style='font-weight: 800;'>:</a> 2");
                             addLine("<a style='color: #068984;font-weight: 800;'>            `/++++/+++++++:              Shell</a><a style='font-weight: 800;'>:</a> zsh");
                             addLine("<a style='color: #068984;font-weight: 800;'>           `/++++++++++++++:             </a>-------------                      ");
@@ -156,7 +157,6 @@ document.addEventListener('keydown', function(e) {
                             addLine("<a style='color: #068984;font-weight: 800;'>  `+sso+:-`                 `.-/+oso:");
                             addLine("<a style='color: #068984;font-weight: 800;'> `++:.                           `-/+/");
                             addLine("<a style='color: #068984;font-weight: 800;'> .`                                 `/");
-
                             break;
 
                         case "twitter":
@@ -232,4 +232,10 @@ function addLine(line_text, as_text) {
 
 function focusTerminal() {
     document.querySelector('input').focus();
+}
+
+function getAge(date) {
+    const diff = Date.now() - date;
+    const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+    return age;
 }
