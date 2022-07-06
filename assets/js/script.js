@@ -65,17 +65,17 @@ $(window).on("load", function() {
 
                 const button = $(this);
                 if (!button.hasClass("progress")) {
+                    $("body").addClass("loading");
                     button.addClass("progress");
                     setTimeout(function() {
+                        if($("body").hasClass("loading")) $("body").removeClass("loading");
                         $(".terminal").fadeIn(250, "swing");
-
-                        if ($(".terminal").hasClass("minimized"))
-                        $(".terminal").removeClass("minimized");
-                    }, 100);
+                        if ($(".terminal").hasClass("minimized")) $(".terminal").removeClass("minimized");
+                    }, 1000);
                     setTimeout(function() {
                         if (button.hasClass("progress"))
                             button.removeClass("progress");
-                    }, 1000);
+                    }, 600);
                 }
             });
             $(".toolbar .buttons .red").click(function() {

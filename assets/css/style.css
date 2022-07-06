@@ -15,6 +15,24 @@ body {
     background: #1f1f1f;
 }
 
+.loading{
+    cursor: wait !important;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin: auto;
+    filter: blur(5px);
+    opacity: 0.035;
+    background: url('assets/img/lucoa.png');
+}
+
 .minimized{
     transform: scale(0.9);
 }
@@ -60,7 +78,6 @@ body {
 }
 
 .container {
-    background: #1f1f1f;
     height: 100vh;
     font-family: 'Source Code Pro', monospace;
     display: flex;
@@ -68,6 +85,7 @@ body {
     align-items: center;
     transform: scale(0.95);
     opacity: 0;
+    z-index: 2;
     transition: all .6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -89,6 +107,12 @@ body {
     text-align: center;
     border-radius: 0.5em;
     margin: 0 auto;
+    cursor: pointer;
+    transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.taskbar .task-button:hover {
+    transform: scale(1.05);
 }
 
 .full-width {
@@ -97,7 +121,7 @@ body {
 
 .toolbar .buttons .red.progress {
     animation-name: taskActivate;
-    animation-duration: 1s;
+    animation-duration: .6s;
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
@@ -105,7 +129,7 @@ body {
 
 .taskbar .task-button.progress {
     animation-name: taskActivate;
-    animation-duration: 1s;
+    animation-duration: .6s;
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
@@ -148,7 +172,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 360px;
-    background: #484a4e45;
+    background: #121212;
     width: 300px;
     border-radius: 8px;
     color: #eee;
