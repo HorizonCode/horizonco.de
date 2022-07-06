@@ -20,16 +20,43 @@ body {
     cursor: wait !important;
 }
 
-.clock {
+.dayInfo {
     position: absolute;
     top: 10%;
     left: 50%;
     text-align: center;
+    transform: translate(-50%, -10%);
+    opacity: 0;
+    animation-name: appear;
+    animation-duration: .6s;
+    animation-iteration-count: 1;
+    animation-delay: 1.23s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.dayInfo h5 {
     font-size: 110px;
     color: #fff;
-    transform: translate(-50%, -10%);
     font-weight: 200;
     font-family: 'Nunito', sans-serif;
+}
+
+.dayInfo h6 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 200;
+    font-family: 'Nunito', sans-serif;
+    margin-top: -20px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .background{

@@ -6,6 +6,7 @@ $(window).on("load", function() {
 
     setInterval(function(){
         $("#clock").html(new Date().toLocaleTimeString());
+        $("#date").html(new Date().toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" }));
     }, 1000);
 
     setTimeout(function() {
