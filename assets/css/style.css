@@ -30,7 +30,7 @@ body {
     margin: auto;
     filter: blur(5px);
     opacity: 0.035;
-    background: url('assets/img/lucoa.png');
+    background: url('/assets/img/lucoa.png');
 }
 
 .minimized{
