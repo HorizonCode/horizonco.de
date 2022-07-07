@@ -35,7 +35,7 @@ $(window).on("load", function() {
             dateField.html(newDateString);
             dateField.attr("data-content", newDateString);
         }
-    }, 1000);
+    }, 0, 1000);
 
     setTimeout(function() {
         const width = window.innerWidth;
