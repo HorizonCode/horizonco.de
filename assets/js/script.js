@@ -41,7 +41,7 @@ $(window).on("load", function() {
         const width = window.innerWidth;
         const height = window.innerHeight;
         if(width < 715 || height < 402){
-            $("#hide-mobile").remove();
+            $("#hide-mobile").hide();
         }
         $(".preloader").fadeOut(750, "swing", function() {
             $(".preloader").remove();
@@ -133,6 +133,16 @@ $(window).on("load", function() {
         }, 450);
 
     }, 250 + Math.floor(Math.random() * 750));
+});
+
+$( window ).resize(function() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    if(width < 715 || height < 402){
+        $("#hide-mobile").hide();
+    } else {
+        $("#hide-mobile").show();
+    }
 });
 
 let historyIndex = 0;
