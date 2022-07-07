@@ -15,11 +15,23 @@ $(window).on("load", function() {
         const minutes = currentDate.getMinutes();
         const seconds = currentDate.getSeconds();
 
-        if(clockHours.html() != hours) clockHours.html(hours < 10 ? "0" + hours : hours);
-        if(clockMinutes.html() != minutes) clockMinutes.html(minutes < 10 ? "0" + minutes : minutes);
-        if(clockSeconds.html() != seconds) clockSeconds.html(seconds < 10 ? "0" + seconds : seconds);
+        if(clockHours.html() != hours){
+            clockHours.html(hours < 10 ? "0" + hours : hours);
+            clockHours.attr("data-content", hours < 10 ? "0" + hours : hours);
+        } 
+        if(clockMinutes.html() != minutes) {
+            clockMinutes.html(minutes < 10 ? "0" + minutes : minutes);
+            clockMinutes.attr("data-content", minutes < 10 ? "0" + minutes : minutes);
+        }
+        if(clockSeconds.html() != seconds) {
+            clockSeconds.html(seconds < 10 ? "0" + seconds : seconds);
+            clockSeconds.attr("data-content", seconds < 10 ? "0" + seconds : seconds);
+        }
 
-        if(newDateString !== dateField.html()) dateField.html(newDateString);
+        if(newDateString !== dateField.html()) {
+            dateField.html(newDateString);
+            dateField.attr("data-content", newDateString);
+        }
     }, 1000);
 
     setTimeout(function() {
