@@ -4,9 +4,10 @@ const dateField = $("#date");
 const clockHours = $("#clock #hours");
 const clockMinutes = $("#clock #minutes");
 const clockSeconds = $("#clock #seconds");
+const age = getAge(Date.parse("1999/01/06 UTC"));
 
 $(window).on("load", function() {
-    $("#age").html(getAge(Date.parse("1999/01/06 UTC")));
+    $("#age").html(age);
 
     setInterval(function(){
         const currentDate = new Date();
@@ -18,11 +19,13 @@ $(window).on("load", function() {
         if(clockHours.html() != hours){
             clockHours.html(hours < 10 ? "0" + hours : hours);
             clockHours.attr("data-content", hours < 10 ? "0" + hours : hours);
-        } 
+        }
+
         if(clockMinutes.html() != minutes) {
             clockMinutes.html(minutes < 10 ? "0" + minutes : minutes);
             clockMinutes.attr("data-content", minutes < 10 ? "0" + minutes : minutes);
         }
+
         if(clockSeconds.html() != seconds) {
             clockSeconds.html(seconds < 10 ? "0" + seconds : seconds);
             clockSeconds.attr("data-content", seconds < 10 ? "0" + seconds : seconds);
@@ -176,7 +179,7 @@ document.addEventListener('keydown', function(e) {
                             addLine("<a style='color: #068984;font-weight: 800;'>                 `ooo/                   OS</a><a style='font-weight: 800;'>:</a> Linux Arch");
                             addLine("<a style='color: #068984;font-weight: 800;'>                `+oooo:                  Host</a><a style='font-weight: 800;'>:</a> NZXT N7 Z390");
                             addLine("<a style='color: #068984;font-weight: 800;'>               `+oooooo:                 Kernel</a><a style='font-weight: 800;'>:</a> 5.11.22-194-tkg-upds");
-                            addLine("<a style='color: #068984;font-weight: 800;'>               -+oooooo+:                Uptime</a><a style='font-weight: 800;'>:</a> " + getAge(Date.parse("1999/01/06 UTC")) + " years");
+                            addLine("<a style='color: #068984;font-weight: 800;'>               -+oooooo+:                Uptime</a><a style='font-weight: 800;'>:</a> " + age + " years");
                             addLine("<a style='color: #068984;font-weight: 800;'>             `/:-:++oooo+:               Projects</a><a style='font-weight: 800;'>:</a> 2");
                             addLine("<a style='color: #068984;font-weight: 800;'>            `/++++/+++++++:              Shell</a><a style='font-weight: 800;'>:</a> zsh");
                             addLine("<a style='color: #068984;font-weight: 800;'>           `/++++++++++++++:             </a>-------------                      ");
