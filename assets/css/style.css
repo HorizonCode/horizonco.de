@@ -54,7 +54,7 @@ body {
     }
 }
 
-@media screen and (min-height: 860px) {
+@media screen and (min-height: 860px) and (min-width: 950px) {
     .dayInfo {
         opacity: 1;
     }
