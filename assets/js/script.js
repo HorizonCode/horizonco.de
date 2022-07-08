@@ -5,9 +5,36 @@ const clockHours = $("#clock #hours");
 const clockMinutes = $("#clock #minutes");
 const clockSeconds = $("#clock #seconds");
 const age = getAge(Date.parse("1999/01/06 UTC"));
+const cursor = $(".cursor");
+const cursorborder = $(".cursorborder");
 
 $(window).on("load", function() {
     $("#age").html(age);
+
+    $(".red").mouseover(function() {
+        cursor.addClass('hover');
+    });
+
+    $(".red").mouseleave(function() {
+        cursor.removeClass('hover');
+    });
+
+    $(".task-button").mouseover(function() {
+        cursor.addClass('hover');
+    });
+
+    $(".task-button").mouseleave(function() {
+        cursor.removeClass('hover');
+    });
+
+    $("body").mousemove(function(e) {
+        var x = e.pageX;
+        var y = e.pageY;
+        cursor.css("left", x + "px");
+        cursor.css("top", y + "px");
+        cursorborder.css("transform", "translate3d(calc(" + e.clientX + "px - 50%), calc(" + e.clientY + "px - 50%), 0)");
+        
+    });
 
     setInterval(function(){
         const currentDate = new Date();

@@ -9,14 +9,11 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    cursor: none;
 }
 
 body {
     background: #1f1f1f;
-}
-
-.loading {
-    cursor: wait !important;
 }
 
 .dayInfo {
@@ -241,7 +238,6 @@ body {
     text-align: center;
     border-radius: 0.5em;
     margin: 0 auto;
-    cursor: pointer;
     transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -388,7 +384,6 @@ p>span {
 
 .close-button:hover {
     background: #f7908c;
-    cursor: pointer;
 }
 
 .yellow {
@@ -420,7 +415,6 @@ input {
     padding-top: 3px;
     padding-bottom: 2px;
     caret-color: #888;
-    cursor: default;
     letter-spacing: 0.3px;
 }
 
@@ -549,6 +543,37 @@ a.link:hover {
     }
 }
 
+/* Cursor */
+
+.cursor {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: white;
+    opacity: .3;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+}
+
+.cursor.hover{
+    opacity: 0.5;
+    width: 49px;
+    height: 49px;
+}
+
+.cursorborder {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid #f1f1f1;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+  }
 
 /* Tooltips */
 
