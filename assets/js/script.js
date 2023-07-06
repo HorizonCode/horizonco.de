@@ -214,7 +214,7 @@ document.addEventListener('keydown', function(e) {
                             addLine("<a style='color: #068984;font-weight: 800;'>                  .o+`                   </a>-------------");
                             addLine("<a style='color: #068984;font-weight: 800;'>                 `ooo/                   OS</a><a style='font-weight: 800;'>:</a> Linux Arch");
                             addLine("<a style='color: #068984;font-weight: 800;'>                `+oooo:                  Host</a><a style='font-weight: 800;'>:</a> NZXT N7 Z390");
-                            addLine("<a style='color: #068984;font-weight: 800;'>               `+oooooo:                 Kernel</a><a style='font-weight: 800;'>:</a> 5.11.22-194-tkg-upds");
+                            addLine("<a style='color: #068984;font-weight: 800;'>               `+oooooo:                 Kernel</a><a style='font-weight: 800;'>:</a> 6.3.2-273-tkg-cfs");
                             addLine("<a style='color: #068984;font-weight: 800;'>               -+oooooo+:                Uptime</a><a style='font-weight: 800;'>:</a> " + age + " years");
                             addLine("<a style='color: #068984;font-weight: 800;'>             `/:-:++oooo+:               Projects</a><a style='font-weight: 800;'>:</a> 2");
                             addLine("<a style='color: #068984;font-weight: 800;'>            `/++++/+++++++:              Shell</a><a style='font-weight: 800;'>:</a> zsh");
