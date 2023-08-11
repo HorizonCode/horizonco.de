@@ -114,7 +114,7 @@ $(window).on("load", function() {
                 if (!button.hasClass("progress")) {
                     button.addClass("progress");
                     setTimeout(function() {
-                        window.open("https://kitsu.moe", '_blank').focus();
+                        window.open("https://osu.direct", '_blank').focus();
                     }, 100);
                     setTimeout(function() {
                         if (button.hasClass("progress"))
@@ -246,7 +246,7 @@ document.addEventListener('keydown', function(e) {
                         case "projects":
                             addLine("======================> Project list <======================");
                             addLine("<a class='link' href='https://ez-pp.farm' target='_blank'>https://ez-pp.farm</a> - a private osu! server");
-                            addLine("<a class='link' href='https://kitsu.moe' target='_blank'>https://kitsu.moe</a> - a osu! beatmap crawler slave");
+                            addLine("<a class='link' href='https://osu.direct' target='_blank'>https://osu.direct</a> - a osu! beatmap crawler slave");
                             addLine("============================================================");
                             break;
 
