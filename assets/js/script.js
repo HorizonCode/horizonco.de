@@ -220,7 +220,7 @@ document.addEventListener('keydown', function(e) {
                             addLine("<a style='color: #068984;font-weight: 800;'>            `/++++/+++++++:              Shell</a><a style='font-weight: 800;'>:</a> zsh");
                             addLine("<a style='color: #068984;font-weight: 800;'>           `/++++++++++++++:             </a>-------------                      ");
                             addLine("<a style='color: #068984;font-weight: 800;'>          `/+++ooooooooooooo/`           CPU</a><a style='font-weight: 800;'>:</a> Intel i9-9900K (16) @ 5.2000GHz");
-                            addLine("<a style='color: #068984;font-weight: 800;'>         ./ooosssso++osssssso+`          GPU</a><a style='font-weight: 800;'>:</a> NVidia RTX 2060 SUPER");
+                            addLine("<a style='color: #068984;font-weight: 800;'>         ./ooosssso++osssssso+`          GPU</a><a style='font-weight: 800;'>:</a> NVidia RTX 3070");
                             addLine("<a style='color: #068984;font-weight: 800;'>        .oossssso-````/ossssss+`         Memory</a><a style='font-weight: 800;'>:</a> 32045MiB");
                             addLine("<a style='color: #068984;font-weight: 800;'>       -osssssso.      :ssssssso.");
                             addLine("<a style='color: #068984;font-weight: 800;'>      :osssssss/        osssso+++.");
