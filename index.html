@@ -1,79 +1,85 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>HorizonCode Portfolio</title>
-        <meta name="description" content="My Portfolio." />
-        <meta name="author" content="HorizonCode" />
-        <link rel="stylesheet" href="assets/css/style.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-    </head>
-    <body>
-        <div class="preloader">
-            <div class="spinner"></div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HorizonCode Portfolio</title>
+  <meta name="description" content="My Portfolio." />
+  <meta name="author" content="HorizonCode" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="crt"></div>
+  <div class="preloader">
+    <div class="spinner"></div>
+  </div>
+  <canvas id="magic-dust" style="position: absolute;top: 0;left: 0;"></canvas>
+  <div class="dayInfo">
+    <h5 class="throw-shadow" id="clock">
+      <span id="hours">00</span><span class="timeDivider">:</span><span id="minutes">00</span><span
+        class="timeDivider">:</span><span id="seconds">00</span>
+    </h5>
+    <h6 class="throw-shadow" id="date">
+      </h5>
+  </div>
+  <div class="container">
+    <div class="profile-card throw-shadow">
+      <div>
+        <img src="https://avatars.githubusercontent.com/u/18552186?v=4" alt="icon" width="500" height="500" />
+      </div>
+      <div>
+        <h4>HorizonCode</h4>
+        <h6><span id="age">0</span> y/o he/they ▪️ Full Stack Developer☕</h6>
+      </div>
+      <div class="full-width">
+        <div class="seperator"></div>
+        <h3 class="taskbar-title">Apps</h3>
+        <div class="taskbar throw-shadow">
+          <div class="task-button term throw-shadow" id="hide-mobile" data-tooltip="Terminal">
+            <i class="fa-solid fa-terminal"></i>
+          </div>
+          <div class="task-button git throw-shadow" data-tooltip="My own git">
+            <i class="fa-brands fa-git"></i>
+          </div>
+          <div class="task-button kitsu throw-shadow" data-tooltip="My osu beatmap mirror">
+            <i class="fa-brands fa-itunes-note"></i>
+          </div>
         </div>
-        <canvas id="magic-dust" style="position: absolute;top: 0;left: 0;"></canvas>
-        <div class="dayInfo">
-            <h5 class="throw-shadow" id="clock">
-                <span id="hours">00</span><span class="timeDivider">:</span><span id="minutes">00</span><span class="timeDivider">:</span><span id="seconds">00</span>
-            </h5>
-            <h6 class="throw-shadow" id="date">
-            </h5>
+      </div>
+    </div>
+    <div class="throw-shadow-relative">
+      <div class="terminal minimized" onClick='focusTerminal();'>
+        <div class="toolbar">
+          <div class="buttons">
+            <div class="red"></div>
+            <div class="yellow"></div>
+            <div class="green"></div>
+            <div class="heading">guest@horizoncode: ~</div>
+          </div>
         </div>
-        <div class="container">
-            <div class="profile-card throw-shadow">
-                <div>
-                    <img src="https://avatars.githubusercontent.com/u/18552186?v=4" alt="icon" width="500" height="500" />
-                </div>
-                <div>
-                    <h4>HorizonCode</h4>
-                    <h6><span id="age">0</span> y/o he/they ▪️ Full Stack Developer☕</h6>
-                </div>
-                <div class="full-width">
-                    <div class="seperator"></div>
-                    <h3 class="taskbar-title">Apps</h3>
-                    <div class="taskbar throw-shadow">
-                        <div class="task-button term throw-shadow" id="hide-mobile" data-tooltip="Terminal">
-                            <i class="fa-solid fa-terminal"></i>
-                        </div>
-                        <div class="task-button git throw-shadow" data-tooltip="My own git">
-                            <i class="fa-brands fa-git"></i>
-                        </div>
-                        <div class="task-button kitsu throw-shadow" data-tooltip="My osu beatmap mirror">
-                            <i class="fa-brands fa-itunes-note"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="throw-shadow-relative">
-                <div class="terminal minimized" onClick='focusTerminal();'>
-                    <div class="toolbar">
-                        <div class="buttons">
-                            <div class="red"></div>
-                            <div class="yellow"></div>
-                            <div class="green"></div>
-                            <div class="heading">guest@horizoncode: ~</div>
-                        </div>
-                    </div>
-                    <p>
-                        Welcome to HorizonCode's portfolio — Type <span>help</span> or <span>?</span> for a list of supported commands.
-                    </p>
-                    <div class="commands"></div>
-                    <label for="command">guest@horizoncode:~# </label>
-                    <input id="command" type="text" autoComplete="off" spellcheck="false" autofocus/>
-                </div>
-            </div>
-        </div>
-        <div class="background"></div>
-        <div class="cursor"></div>
-        <div class="cursorborder"></div>
-    </body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
-    <script src="assets/js/gasp.min.js"></script>
-    <script src="assets/js/Physics2DPlugin3.js"></script>
-    <script src="assets/js/particles.js"></script>
-    <script src="assets/js/script.js"></script>
+        <p>
+          Welcome to HorizonCode's portfolio — Type <span>help</span> or <span>?</span> for a list of supported
+          commands.
+        </p>
+        <div class="commands"></div>
+        <label for="command">guest@horizoncode:~# </label>
+        <input id="command" type="text" autoComplete="off" spellcheck="false" autofocus />
+      </div>
+    </div>
+  </div>
+  <div class="background"></div>
+  <div class="cursor"></div>
+  <div class="cursorborder"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+<script src="assets/js/gasp.min.js"></script>
+<script src="assets/js/Physics2DPlugin3.js"></script>
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/script.js"></script>
+
 </html>
